@@ -1,11 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>자기소개</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Rubik+Vinyl&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Rubik+Vinyl&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>자기소개</h1>
+  <!-- 네비게이션 바 -->
+  <nav class="navbar">
+    <ul>
+      <li>
+        <a href="#home">
+          <img src="soccerball.png" alt="Home" class="nav-icon" />
+          <span class="tooltip">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <img src="soccerball.png" alt="About" class="nav-icon" />
+          <span class="tooltip">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#favorite">
+          <img src="soccerball.png" alt="Favorite" class="nav-icon" />
+          <span class="tooltip">Favorite</span>
+        </a>
+      </li>
+      <li>
+        <a href="#goal">
+          <img src="soccerball.png" alt="Goal" class="nav-icon" />
+          <span class="tooltip">Goal</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <img src="soccerball.png" alt="Contact" class="nav-icon" />
+          <span class="tooltip">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Home 섹션 -->
+  <section id="home">
+    <div class="home-content">
+        <h1 class="gsap-wave rubik-vinyl-regular">Hello, I'm Hanna</h1>
+        <p class="nanum-pen-script-regular ">안녕하세요! 연세 가상인턴 성한나 사원이라고 합니다. 잘 부탁드립니다 :)</p>
+    </div>
+  </section>
+
+  <!-- About 섹션 -->
+  <section id="about">
+    <h1 class="sixtyfour">About</h1>
+    <div class="card">
+        <div class="card-image">
+          <img src="profile.jpg" alt="Profile Picture">
+        </div>
+        <div class="card-info">
+          <div class="card-row">
+            <span class="card-label">이름</span>
+            <span class="card-value">성한나</span>
+          </div>
+          <div class="card-row">
+            <span class="card-label">생년월일</span>
+            <span class="card-value">2001.05.23</span>
+          </div>
+          <div class="card-row">
+            <span class="card-label">전공</span>
+            <span class="card-value">스포츠응용산업학과</span>
+          </div>
+          <div class="card-row">
+            <span class="card-label">MBTI</span>
+            <span class="card-value">
+              ENTP
+            </span>
+          </div>
+          <div class="card-row">
+            <span class="card-label">이메일</span>
+            <span class="card-value">
+              aj50252@naver.com
+            </span>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Favorite 섹션 -->
+  <section id="favorite">
+    <h1 class="sixtyfour">Favorite</h1>
+    <p class="favorite-description nanum-pen-script-regular">제가 좋아하는 것들은요..</p>
+    <div class="favorite-container">
+      <!-- 첫 번째 카드 -->
+      <div class="favorite-card">
+        <img src="coco.jpg" alt="강아지" class="favorite-image">
+        <h2 class="favorite-title nanum-pen-script-regular">강아지 🐶</h2>
+        <p class="favorite-text nanum-pen-script-regular">
+          이름은 코코이고, 믹스견이에요. 나이는 9살이고 정말정말 순해서 바보같아요 !
+        </p>
+      </div>
+  
+      <!-- 두 번째 카드 -->
+      <div class="favorite-card">
+        <img src="soccer.jpg" alt="soccer" class="favorite-image">
+        <h2 class="favorite-title nanum-pen-script-regular">축구 ⚽</h2>
+        <p class="favorite-text nanum-pen-script-regular">
+          교내 여자축구동아리에서 4년째 활동 중이에요. 작년엔 주장도 맡았었고, 축구는 제가 가장 좋아하는 운동이에요 ㅎㅎ
+        </p>
+      </div>
+  
+      <!-- 세 번째 카드 -->
+      <div class="favorite-card">
+        <img src="travle.jpg" alt="여행" class="favorite-image">
+        <h2 class="favorite-title nanum-pen-script-regular">여행 ✈️</h2>
+        <p class="favorite-text nanum-pen-script-regular">
+          좋아하는 사람들과 여행가는 것을 좋아해요. 지난주에는 가족들과 제주도에 다녀왔어요 !
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="goal">
+    <h1 class="sixtyfour">Goal</h1>
+    <p class="nanum-pen-script-regular">앞으로 저의 목표는</p>
+    <div class="goal-container">
+      <!-- 첫 번째 카드 -->
+      <div class="goal-card">
+        <div class="goal-overlay">
+          <iframe 
+            src="https://giphy.com/embed/3o6nUYKzUwcW3mDgqI" 
+            width="100%" 
+            height="200" 
+            style="border: none;" 
+            frameBorder="0" 
+            allowFullScreen>
+          </iframe>
+          <div class="goal-text">
+            <p># 세계일주</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 두 번째 카드 -->
+      <div class="goal-card">
+        <div class="goal-overlay">
+          <iframe 
+            src="https://giphy.com/embed/Sk3KytuxDQJQ4" 
+            width="100%" 
+            height="200" 
+            style="border: none;" 
+            frameBorder="0" 
+            allowFullScreen>
+          </iframe>
+          <div class="goal-text">
+            <p># 풀스택 개발자</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 세 번째 카드 -->
+      <div class="goal-card">
+        <div class="goal-overlay">
+          <iframe 
+            src="https://giphy.com/embed/VzQ9PUdifClRm" 
+            width="100%" 
+            height="200" 
+            style="border: none;" 
+            frameBorder="0" 
+            allowFullScreen>
+          </iframe>
+          <div class="goal-text">
+            <p>#사랑하는 사람들과 행복하게 살기</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Contact 섹션 -->
+  <section id="contact">
+    <h1 class="sixtyfour">Contact</h1>
+    <div class="contact-links">
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://velog.io" target="_blank">Velog</a>
+      <a href="https://github.com/seonghanna/yonsei-Intern" target="_blank">GitHub</a>
+    </div>
+    <p class="nanum-pen-script-regular">* 깃헙만 실제 주소 넣었습니다 !</p>
+  </section>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const text = document.querySelector(".gsap-wave");
+      const letters = text.textContent.split("");
+  
+      text.innerHTML = letters
+        .map((letter) => `<span class="letter">${letter}</span>`)
+        .join("");
+  
+      gsap.fromTo(
+        ".letter",
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.1, 
+          ease: "bounce.out",
+          repeat: -1,        // 무한 반복
+          repeatDelay: 0.5
+        }
+      );
+
+    });
+  </script>
+  
+  
 </body>
 </html>

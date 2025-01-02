@@ -1,0 +1,388 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* 네비게이션 바 스타일 */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  /* 네비게이션 아이템 스타일 */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .navbar ul li {
+    position: relative; /* 툴팁 위치 조정을 위해 */
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 축구공 아이콘 스타일 */
+  .nav-icon {
+    width: 20px; /* 아이콘 크기 */
+    height: 20px;
+    transition: transform 0.3s ease; /* 호버 시 크기 변화 */
+  }
+  
+  .nav-icon:hover {
+    transform: scale(1.2); /* 마우스 올렸을 때 확대 */
+  }
+  
+  /* 툴팁 스타일 */
+  .tooltip {
+    position: absolute;
+    bottom: -42px; /* 축구공 아래에 표시 */
+    background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 */
+    color: white; /* 텍스트 색상 */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0; /* 기본적으로 숨김 */
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none; /* 클릭 불가 */
+  }
+  
+  /* 툴팁 표시 (호버 시) */
+  .nav-icon:hover + .tooltip {
+    opacity: 1;
+    transform: translateY(0); /* 위로 올라옴 */
+  }
+  
+  .navbar ul li a:hover {
+    color: #FFD700; /* 골드 색상 */
+  }
+  
+  /* 섹션 스타일 */
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Home 섹션 스타일 */
+#home {
+    background: url('home_background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+  }
+  
+  /* 섹션 내용 중앙 정렬 */
+  .home-content {
+    text-align: center;
+  }
+
+  .rubik-vinyl-regular {
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-size: 6rem;
+    font-style: normal;
+  }
+  
+  .nanum-pen-script-regular {
+    font-family: "Nanum Pen Script", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: normal;
+  }
+
+  .sixtyfour{
+    font-family: "Sixtyfour", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+  }
+
+  #about {
+    background: url('about_background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 정렬 */
+    align-items: center;
+    justify-content: flex-start; /* 상단에 내용 배치 */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-top: 50px; /* 상단에 여백 추가 */
+  }
+  
+  /* 카드 컨테이너 */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 배경 */
+    border-radius: 15px; /* 둥근 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    width: 350px; /* 카드 너비 */
+    margin: 20px auto; /* 센터 정렬 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  /* 프로필 이미지 */
+  .card-image img {
+    width: 150px; /* 이미지 크기 */
+    height: 150px;
+    border-radius: 50%; /* 원형 이미지 */
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  /* 카드 정보 섹션 */
+  .card-info {
+    width: 100%;
+  }
+  
+  /* 카드 행 스타일 */
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 행 구분선 */
+    padding-bottom: 5px;
+  }
+  
+  /* 레이블과 값 스타일 */
+  .card-label {
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .card-value {
+    color: #555;
+    flex: 2;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* 아이콘 스타일 */
+  .icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  
+
+  
+  #favorite {
+    background: url('favorite_background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 정렬 */
+    align-items: center;
+    justify-content: flex-start; /* 상단에 내용 배치 */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-top: 50px; /* 상단에 여백 추가 */
+  }
+  
+  .favorite-description {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  /* 카드 컨테이너 */
+  .favorite-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* 반응형으로 카드가 줄바꿈 가능 */
+  }
+  
+  /* 카드 스타일 */
+  .favorite-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .favorite-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover; /* 이미지 비율 유지 */
+    margin-bottom: 15px;
+  }
+  
+  .favorite-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1px;
+  }
+  
+  .favorite-text {
+    font-size: 1.8rem;
+    color: #666;
+    line-height: 1;
+  }
+
+  .favorite-title, .favorite-text {
+    text-shadow: none; /* 텍스트 그림자 제거 */
+  }
+  
+  
+  /* 반응형 설정 */
+  @media (max-width: 768px) {
+    .favorite-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .favorite-card {
+      width: 100%;
+    }
+  }
+
+  #goal {
+    background: url('goal_background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 정렬 */
+    align-items: center;
+    justify-content: flex-start; /* 상단에 내용 배치 */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-top: 50px; /* 상단에 여백 추가 */
+  }
+
+/* 카드 컨테이너 */
+.goal-container {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 20px; /* 카드 간격 */
+    flex-wrap: wrap; /* 반응형 줄바꿈 */
+    padding-top: 100px;
+  }
+  
+  /* 카드 스타일 */
+  .goal-card {
+    width: 400px;
+    height: 250px;
+    position: relative; /* 자식 요소 배치를 위한 기준 */
+    overflow: hidden; /* 초과 콘텐츠 숨기기 */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* GIF와 텍스트 오버레이 */
+  .goal-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .goal-overlay iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  
+  /* 텍스트 스타일 */
+  .goal-text {
+    position: absolute; /* 오버레이 상단에 배치 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* 텍스트 그림자 */
+    text-align: center;
+    z-index: 1; /* GIF보다 위에 표시 */
+  }
+
+
+  #contact {
+    background: url('contact_background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 정렬 */
+    align-items: center;
+    justify-content: flex-start; /* 상단에 내용 배치 */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-top: 200px; /* 상단에 여백 추가 */
+  }
+
+  /* 링크 컨테이너 */
+.contact-links {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 40px; /* 링크 간격 */
+    margin-top: 120px;
+  }
+  
+  /* 개별 링크 스타일 */
+  .contact-links a {
+    text-decoration: none;
+    color: white; /* 링크 색상 */
+    font-size: 1.5rem;
+    font-weight: bold; 
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* 링크 호버 효과 */
+  .contact-links a:hover {
+    background-color: rgb(12, 12, 92); /* 호버 시 오렌지색 */
+    color: #fff; /* 텍스트 색상 */
+    transform: scale(1.1); /* 크기 확대 */
+  }
+  
